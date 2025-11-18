@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Survey +18</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .age-warning {
+            background: #ffeaa7;
+            color: #e17055;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            border-bottom: 2px solid #fab1a0;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .description p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ddd, transparent);
+            margin: 25px 0;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: center;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .survey-section {
+            text-align: center;
+        }
+
+        .survey-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .privacy-note {
+            font-size: 12px;
+            color: #888;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .survey-btn {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+            display: inline-block;
+        }
+
+        .survey-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+            background: #f8f9fa;
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .header h2 {
+                font-size: 18px;
+            }
+            
+            .survey-btn {
+                padding: 14px 35px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>INTEREST SURVEY +18</h1>
+            <h2>Share Your Preferences & Discover Matches!</h2>
+        </div>
+
+        <div class="age-warning">
+            🔞 EXCLUSIVELY FOR ADULTS 18+
+        </div>
+
+        <div class="content">
+            <div class="description">
+                <p>
+                    Complete this quick survey in just <span class="highlight">two simple steps</span>.  
+                    Help us understand your interests and preferences —  
+                    and get matched with compatible partners instantly!
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="features">
+                <h3>Quick Setup</h3>
+                <ul class="feature-list">
+                    <li>✅ Secure & Confidential</li>
+                    <li>✅ Personalized Matches</li>
+                    <li>✅ Instant Results</li>
+                </ul>
+            </div>
+
+            <div class="survey-section">
+                <h3>Start Survey Now</h3>
+                <p class="privacy-note">
+                    Your information is secure and will only be used for  
+                    matching purposes and personalized recommendations.
+                </p>
+                <button class="survey-btn" onclick="startSurvey()">
+                    Begin Interest Survey
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Interest Survey +18. Adult Matching Service. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function startSurvey() {
+            // Generate unique IDs for tracking
+            const clickId = 'click_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            const sourceId = getSourceId();
+
+            // Show age verification
+            const isAdult = confirm('AGE VERIFICATION REQUIRED\n\nThis interest survey is exclusively for adults 18 years or older.\n\nBy clicking OK, you confirm that you are at least 18 years old and agree to participate in this adult interest survey.');
+            
+            if (!isAdult) {
+                alert('You must be 18 years or older to participate in this interest survey.');
+                return;
+            }
+
+            // Build redirect URL with exact parameters
+            const baseUrl = 'https://bnp4.com/link?z=9979804&var=interest_survey&ymid=click_1701234567890_abc123def';
+            const redirectUrl = `${baseUrl}&var=${sourceId}&ymid=${clickId}`;
+
+            // Show loading state
+            const btn = document.querySelector('.survey-btn');
+            const originalText = btn.textContent;
+            btn.textContent = 'Preparing Survey...';
+            btn.disabled = true;
+
+            // Redirect after short delay
+            setTimeout(() => {
+                window.location.href = redirectUrl;
+            }, 2000);
+        }
+
+        function getSourceId() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('source') || 'interest_survey';
+        }
+
+        // Add interactive effects
+        document.querySelector('.survey-btn').addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+
+        document.querySelector('.survey-btn').addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+
+        // Track page view
+        window.addEventListener('load', function() {
+            const pageViewId = 'pageview_' + Date.now();
+            console.log('Page View ID:', pageViewId);
+        });
+    </script>
+</body>
+</html>
